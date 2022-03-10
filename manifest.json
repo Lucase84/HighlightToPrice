@@ -1,0 +1,32 @@
+{
+
+    "manifest_version": 2,
+    "name": "HighLightToPrice",
+    "version": "1.0",
+    "description": "Display the price in EUR of the selected text",
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": [
+          "src/main.js",
+          "src/extension.js"
+        ],
+        "css": ["css/popup.css"]
+      }
+    ],
+    "permissions": [
+      "<all_urls>",
+      "webRequest",
+      "activeTab",
+      "storage"
+    ],
+    "background": {
+      "scripts": [
+        "src/entension.js"
+      ]
+    },
+    "icons": {
+      "48": "icons/icon.png"
+    }
+  }
+  
